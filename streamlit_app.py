@@ -3,8 +3,8 @@ from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 
 # Display Title and Description
-st.title("Vendor Management Portal")
-st.markdown("Enter the details of the new vendor below.")
+st.title("Dane klientek mojej kochanej Mamusi <3")
+st.markdown("Śmiało wpisuj!")
 
 # Establishing a Google Sheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
@@ -33,9 +33,9 @@ with st.form(key="vendor_form"):
     additional_info = st.text_area(label="Dodatkowe Notatki")
 
     # Mark mandatory fields
-    st.markdown("**required*")
+    st.markdown("**Obowiazkowe*")
 
-    submit_button = st.form_submit_button(label="Submit Vendor Details")
+    submit_button = st.form_submit_button(label="Zatwierdz dane")
 
     # If the submit button is pressed
     if submit_button:
