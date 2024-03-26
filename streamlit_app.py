@@ -46,7 +46,8 @@ elif st.session_state["authentication_status"]:
     # Onboarding New Vendor Form
     with st.form(key="vendor_form"):
         nazwisko_imie = st.text_input(label="Nazwisko Imie*")
-        adres = st.text_input(label="Adres*")
+        ulica = st.text_input(label="Ulica*")
+        miasto = st.text_input(label="Miasto*")
         #business_type = st.selectbox("Business Type*", options=BUSINESS_TYPES, index=None)
         telefon = st.text_input(label="Telefon*")
         email = st.text_input(label="Email*")
@@ -72,7 +73,8 @@ elif st.session_state["authentication_status"]:
                     [
                         {
                             "Nazwisko_Imie": nazwisko_imie,
-                            "Adres": adres,
+                            "Ulica": ulica,
+                            "Miasto":miasto,
                             "Telefon":telefon,
                             "Email":email,
                             "Aktywny_Blokada": ", ".join(aktywny),
