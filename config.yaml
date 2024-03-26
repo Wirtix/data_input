@@ -9,7 +9,7 @@ credentials:
       email: butikvictoriafashionss@gmail.com
       logged_in: False # Will be managed automatically
       name: Marta Skutnik
-      password: dWiktoria11978 # Will be hashed automatically
+      password: Wiktoria11978 # Will be hashed automatically
 cookie:
   expiry_days: 30
   key: 'abcde' # Must be string
