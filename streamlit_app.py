@@ -55,7 +55,7 @@ elif st.session_state["authentication_status"]:
         #years_in_business = st.slider("Years in Business", 0, 50, 5)
         #onboarding_date = st.date_input(label="Onboarding Date")
         additional_info = st.text_area(label="Dodatkowe Notatki")
-        gotowe_do_druku = f'{nazwisko_imie}\n{ulica}\n{miasto}\n{email}\n{telefon}'
+        gotowe_do_druku = f'{nazwisko_imie.upper()}\n{ulica.title()}\n{miasto.title()}\n{email}\n{telefon}'
         # Mark mandatory fields
         st.markdown("**Obowiazkowe*")
 
@@ -72,9 +72,9 @@ elif st.session_state["authentication_status"]:
                 vendor_data = pd.DataFrame(
                     [
                         {
-                            "Nazwisko_Imie": nazwisko_imie,
-                            "Ulica": ulica,
-                            "Miasto":miasto,
+                            "Nazwisko_Imie": nazwisko_imie.upper(),
+                            "Ulica": ulica.title(),
+                            "Miasto":miasto.title(),
                             "Telefon":telefon,
                             "Email":email,
                             "Aktywny_Blokada": ", ".join(aktywny),
