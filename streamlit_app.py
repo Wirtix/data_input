@@ -44,7 +44,7 @@ elif st.session_state["authentication_status"]:
     ]
     
     # Onboarding New Vendor Form
-    with st.form(key="vendor_form"):
+    with st.form(key="vendor_form", True):
         nazwisko_imie = st.text_input(label="Nazwisko Imie*")
         ulica = st.text_input(label="Ulica*")
         miasto = st.text_input(label="Miasto*")
