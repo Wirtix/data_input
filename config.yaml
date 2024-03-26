@@ -1,0 +1,19 @@
+credentials:
+  usernames:
+    oskarskutnik:
+      email: oskiwiki2004@gmail.com
+      logged_in: False # Will be managed automatically
+      name: Oskar Skutnik
+      password: Wiktoria11978 # Will be hashed automatically
+    martaskutnik:
+      email: butikvictoriafashionss@gmail.com
+      logged_in: False # Will be managed automatically
+      name: Marta Skutnik
+      password: dWiktoria11978 # Will be hashed automatically
+cookie:
+  expiry_days: 30
+  key: 'abcde' # Must be string
+  name: 'sales_board'
+preauthorized:
+  emails:
+  - melsby@gmail.com
