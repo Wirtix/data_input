@@ -33,7 +33,7 @@ elif st.session_state["authentication_status"]:
     conn = st.connection("gsheets", type=GSheetsConnection)
 
     # Fetch existing vendors data
-    existing_data = conn.read(worksheet="Vendors", usecols=list(range(6)), ttl=5)
+    existing_data = conn.read(worksheet="Vendors", usecols=list(range(8)), ttl=5)
     existing_data = existing_data.dropna(how="all")
 
     # List of Business Types and Produ
