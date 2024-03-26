@@ -42,7 +42,7 @@ elif st.session_state["authentication_status"]:
         'Aktywny',
         'Blokada'
     ]
-
+    
     # Onboarding New Vendor Form
     with st.form(key="vendor_form"):
         nazwisko_imie = st.text_input(label="Nazwisko Imie*")
@@ -92,6 +92,6 @@ elif st.session_state["authentication_status"]:
                 # Update Google Sheets with the new vendor data
                 conn.update(worksheet="Vendors", data=updated_df)
                 conn.update(worksheet="backup", data=updated_df)
-                st.session_state["vedor_form"] = ""
+                nazwisko_imie = st.empty()
                 st.success("Poprawnie przesłane Dane!")
 
