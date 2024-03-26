@@ -24,8 +24,7 @@ elif st.session_state["authentication_status"] is None:
     st.warning('Please enter your username and password')
 elif st.session_state["authentication_status"]:
     #authenticator.logout()
-    st.write(f'Welcome *{st.session_state["name"]}*')
-    st.title('Some content')
+    st.write(f'Cześć Śliczna/y *{st.session_state["name"]}*')
     # Display Title and Description
     st.title("Dane klientek mojej kochanej Mamusi <3")
     st.markdown("Śmiało wpisuj!")
