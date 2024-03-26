@@ -55,7 +55,7 @@ elif st.session_state["authentication_status"]:
         #years_in_business = st.slider("Years in Business", 0, 50, 5)
         #onboarding_date = st.date_input(label="Onboarding Date")
         additional_info = st.text_area(label="Dodatkowe Notatki")
-        gotowe_do_druku = f'{nazwisko_imie}\n{telefon}\n{ulica}\n{miasto}'
+        gotowe_do_druku = f'{nazwisko_imie}\n{ulica}\n{miasto}\n{email}\n{telefon}'
         # Mark mandatory fields
         st.markdown("**Obowiazkowe*")
 
