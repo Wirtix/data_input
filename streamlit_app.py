@@ -64,7 +64,7 @@ elif st.session_state["authentication_status"]:
         # If the submit button is pressed
         if submit_button:
             # Check if all mandatory fields are filled
-            if not nazwisko_imie or not adres:
+            if not nazwisko_imie or not ulica:
                 st.warning("Wprowadz dane mamo!")
                 st.stop()
             else:
