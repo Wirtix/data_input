@@ -92,6 +92,7 @@ elif st.session_state["authentication_status"]:
                 # Update Google Sheets with the new vendor data
                 conn.update(worksheet="Vendors", data=updated_df)
                 conn.update(worksheet="backup", data=updated_df)
-                nazwisko_imie = st.empty()
+                st.session_state.something = st.session_state.widget
+                st.session_state.widget = ''
                 st.success("Poprawnie przesłane Dane!")
 
