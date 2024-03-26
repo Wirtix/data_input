@@ -81,7 +81,6 @@ elif st.session_state["authentication_status"]:
                             #"YearsInBusiness": years_in_business,
                             #"OnboardingDate": onboarding_date.strftime("%Y-%m-%d"),
                             "Dodatkowe_Info": additional_info,
-                            "GOTOWEDODRUKU": ='ZŁĄCZ.TEKSTY(A6;ZNAK(10); B6; ZNAK(10); C6; ZNAK(10);D6)'
                         }
                     ]
                 )
