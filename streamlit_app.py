@@ -42,66 +42,66 @@ if st.session_state["authentication_status"] is False:
             'Aktywny',
             'Blokada'
         ]
- action = st.selectbox(
-    "Choose an Action",
-    [
-        "Wprowadz klientki",
-        "Zobacz klientki",
-    ],
-)       
+         action = st.selectbox(
+            "Choose an Action",
+            [
+                "Wprowadz klientki",
+                "Zobacz klientki",
+            ],
+        )       
 
-if action == "Wprowadz klientki":
-        # Onboarding New Vendor Form
-        with st.form(key="vendor_form", clear_on_submit=True):
-            nazwisko_imie = st.text_input(label="Nazwisko Imie*")
-            ulica = st.text_input(label="Ulica*")
-            miasto = st.text_input(label="Miasto*")
-            #business_type = st.selectbox("Business Type*", options=BUSINESS_TYPES, index=None)
-            telefon = st.text_input(label="Telefon*")
-            email = st.text_input(label="Email*")
-            aktywny = st.selectbox("Aktywny_Blokada", options=AKTYWNY)
-            #years_in_business = st.slider("Years in Business", 0, 50, 5)
-            #onboarding_date = st.date_input(label="Onboarding Date")
-            additional_info = st.text_area(label="Dodatkowe Notatki")
-            gotowe_do_druku = f'{nazwisko_imie.upper()}\n{ulica.title()}\n{miasto.title()}\n{email}\n{telefon}'
-            # Mark mandatory fields
-            st.markdown("**Obowiazkowe*")
-    
-            submit_button = st.form_submit_button(label="Zatwierdz dane")
-    
-            # If the submit button is pressed
-            if submit_button:
-                # Check if all mandatory fields are filled
-                if not nazwisko_imie or not ulica:
-                    st.warning("Wprowadz dane mamo!")
-                    st.stop()
-                else:
-                    # Create a new row of vendor data
-                    vendor_data = pd.DataFrame(
-                        [
-                            {
-                                "Nazwisko_Imie": nazwisko_imie.upper(),
-                                "Ulica": ulica.title(),
-                                "Miasto":miasto.title(),
-                                "Telefon":telefon,
-                                "Email":email,
-                                "Aktywny_Blokada": ", ".join(aktywny),
-                                #"YearsInBusiness": years_in_business,
-                                #"OnboardingDate": onboarding_date.strftime("%Y-%m-%d"),
-                                "Dodatkowe_Info": additional_info,
-                                "Gotowe_Do_Durku": gotowe_do_druku
-                            }
-                        ]
-                    )
-    
-                    # Add the new vendor data to the existing data
-                    updated_df = pd.concat([existing_data, vendor_data], ignore_index=True)
-    
-                    # Update Google Sheets with the new vendor data
-                    conn.update(worksheet="Vendors", data=updated_df)
-                    conn.update(worksheet="backup", data=updated_df)
-                    st.success("Poprawnie przesłane Dane!")
-# View All Vendors
-elif action == "Zobacz klientki":
-    st.dataframe(existing_data)
-
+        if action == "Wprowadz klientki":
+                # Onboarding New Vendor Form
+                with st.form(key="vendor_form", clear_on_submit=True):
+                    nazwisko_imie = st.text_input(label="Nazwisko Imie*")
+                    ulica = st.text_input(label="Ulica*")
+                    miasto = st.text_input(label="Miasto*")
+                    #business_type = st.selectbox("Business Type*", options=BUSINESS_TYPES, index=None)
+                    telefon = st.text_input(label="Telefon*")
+                    email = st.text_input(label="Email*")
+                    aktywny = st.selectbox("Aktywny_Blokada", options=AKTYWNY)
+                    #years_in_business = st.slider("Years in Business", 0, 50, 5)
+                    #onboarding_date = st.date_input(label="Onboarding Date")
+                    additional_info = st.text_area(label="Dodatkowe Notatki")
+                    gotowe_do_druku = f'{nazwisko_imie.upper()}\n{ulica.title()}\n{miasto.title()}\n{email}\n{telefon}'
+                    # Mark mandatory fields
+                    st.markdown("**Obowiazkowe*")
+            
+                    submit_button = st.form_submit_button(label="Zatwierdz dane")
+            
+                    # If the submit button is pressed
+                    if submit_button:
+                        # Check if all mandatory fields are filled
+                        if not nazwisko_imie or not ulica:
+                            st.warning("Wprowadz dane mamo!")
+                            st.stop()
+                        else:
+                            # Create a new row of vendor data
+                            vendor_data = pd.DataFrame(
+                                [
+                                    {
+                                        "Nazwisko_Imie": nazwisko_imie.upper(),
+                                        "Ulica": ulica.title(),
+                                        "Miasto":miasto.title(),
+                                        "Telefon":telefon,
+                                        "Email":email,
+                                        "Aktywny_Blokada": ", ".join(aktywny),
+                                        #"YearsInBusiness": years_in_business,
+                                        #"OnboardingDate": onboarding_date.strftime("%Y-%m-%d"),
+                                        "Dodatkowe_Info": additional_info,
+                                        "Gotowe_Do_Durku": gotowe_do_druku
+                                    }
+                                ]
+                            )
+            
+                            # Add the new vendor data to the existing data
+                            updated_df = pd.concat([existing_data, vendor_data], ignore_index=True)
+            
+                            # Update Google Sheets with the new vendor data
+                            conn.update(worksheet="Vendors", data=updated_df)
+                            conn.update(worksheet="backup", data=updated_df)
+                            st.success("Poprawnie przesłane Dane!")
+        # View All Vendors
+        elif action == "Zobacz klientki":
+            st.dataframe(existing_data)
+        
