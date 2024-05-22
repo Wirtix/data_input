@@ -10,16 +10,9 @@ Check out the web app here: https://vendor-data-entry.streamlit.app/
 - **Data Entry Form:** Users can input (& update) data into a form interface designed with Streamlit.
 - **Google Sheets Integration:** All data entered into the form is automatically synced with a Google Sheet in real-time using the [`streamlit-gsheets-connection`](https://github.com/streamlit/gsheets-connection) library.
 
-## Video Tutorial (Coming soon!)
+## Video Tutorial ( I have inspired by this video)
 [![YouTube Video](https://img.youtube.com/vi/_G5f7og_Dpo/0.jpg)](https://youtu.be/_G5f7og_Dpo)
 
 ## 🤝 Connect with Me
 - 💼 **LinkedIn:** https://www.linkedin.com/in/oskar-skutnik-082b35307/
 
-## Support 
-If you appreciate the project and wish to encourage its continued development, consider [supporting my work](https://pythonandvba.com/coffee-donation).
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://pythonandvba.com/coffee-donation)
-
-## Feedback & Collaboration
-For feedback, suggestions, or potential collaboration opportunities, reach out at contact@pythonandvba.com.
-![Logo](https://www.pythonandvba.com/banner-img)
