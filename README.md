@@ -14,11 +14,7 @@ Check out the web app here: https://vendor-data-entry.streamlit.app/
 [![YouTube Video](https://img.youtube.com/vi/_G5f7og_Dpo/0.jpg)](https://youtu.be/_G5f7og_Dpo)
 
 ## 🤝 Connect with Me
-- 📺 **YouTube:** [CodingIsFun](https://youtube.com/c/CodingIsFun)
-- 🌐 **Website:** [PythonAndVBA](https://pythonandvba.com)
-- 💬 **Discord:** [Join the Community](https://pythonandvba.com/discord)
-- 💼 **LinkedIn:** [Sven Bosau](https://www.linkedin.com/in/sven-bosau/)
-- 📸 **Instagram:** [sven_bosau](https://www.instagram.com/sven_bosau/)
+- 💼 **LinkedIn:** https://www.linkedin.com/in/oskar-skutnik-082b35307/
 
 ## Support 
 If you appreciate the project and wish to encourage its continued development, consider [supporting my work](https://pythonandvba.com/coffee-donation).
