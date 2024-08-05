@@ -2,4 +2,4 @@ streamlit
 st-gsheets-connection
 streamlit-authenticator
 pandas
-numpy
+numpy==1.26.4
